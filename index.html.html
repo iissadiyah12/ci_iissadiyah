@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Landing Page</title>
+  <style>
+    :root {
+      --primary: #2563eb;
+      --dark: #0f172a;
+      --light: #f8fafc;
+      --gray: #132236;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', system-ui, sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(180deg, #020617, #0f172a);
+      color: var(--light);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 420px;
+      padding: 24px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 28px;
+      padding: 32px 24px;
+      backdrop-filter: blur(18px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+      animation: fadeUp 0.9s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .avatar {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      padding: 4px;
+      background: linear-gradient(135deg, var(--primary), #cff1f7);
+      margin-bottom: 18px;
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      background: #000;
+    }
+
+    h1 {
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+    }
+
+    .role {
+      font-size: 14px;
+      color: var(--gray);
+      margin-top: 6px;
+    }
+
+    .about {
+      font-size: 14px;
+      line-height: 1.7;
+      color: #000208;
+      margin-bottom: 28px;
+      text-align: center;
+    }
+
+    .actions {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .actions a {
+      text-decoration: none;
+      text-align: center;
+      padding: 14px;
+      border-radius: 14px;
+      font-size: 14px;
+      font-weight: 500;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), #22d3ee);
+      color: #fff;
+      box-shadow: 0 12px 30px rgba(37, 99, 235, 0.4);
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(43, 3, 3, 0.2);
+      color: var(--light);
+    }
+
+    .actions a:active {
+      transform: scale(0.97);
+    }
+
+    .footer {
+      margin-top: 26px;
+      font-size: 12px;
+      color: var(--gray);
+      text-align: center;
+    }
+
+    @media (min-width: 768px) {
+      body {
+        background: radial-gradient(circle at top, #f1f1f1, #85def5);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="profile">
+        <div class="avatar">
+          <!-- ganti foto.jpg dengan foto kamu -->
+          <img src="foto.jpg" alt="Foto Profil" />
+        </div>
+        <h1>Iis Sadiyah</h1>
+        <p class="role">Student</p>
+      </div>
+
+      <p class="about">
+        Saya adalah siswi kelas XII SMK Al-Ma’mun Sumedang dan saat ini saya juga mondok. Dengan belajar di SMK sekaligus mondok, saya berusaha membagi waktu antara pendidikan formal dan pendidikan agama agar dapat menjadi pribadi yang disiplin, mandiri, dan bertanggung jawab.
+      </p>
+
+      <div class="actions">
+        <a href="#" class="btn-primary">Lihat Portofolio</a>
+        <a href="#" class="btn-secondary">Hubungi Saya</a>
+      </div>
+
+      <div class="footer">
+        © 2026 • by issdyah
+      </div>
+    </div>
+  </div>
+</body>
+</html>
